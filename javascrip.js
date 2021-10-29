@@ -32,7 +32,8 @@ function inputsVacios(){
 )
 return (flag1&&flag2)
 }
-
+//si mando todo excepto lo no necesario como telefono y edad aparece el alert verde, sino se recarga la page.
+//entonces funca gente clap clap.
 function validity(){
   var num =parseInt( document.getElementById("validationCustom06").value);
   var name= document.getElementById("validationCustom01").value.length;
