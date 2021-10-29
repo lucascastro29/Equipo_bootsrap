@@ -11,9 +11,34 @@ if (toastTrigger) {
     toast.show()
   })
 }
+
+function inputsVacios(){
+  let a=document.getElementById("validationCustom01").value
+  let b=document.getElementById("validationCustom02").value
+  let c=document.getElementById("validationCustom03").value
+  let d=document.getElementById("validationout1").value
+  let e=document.getElementById("validationout2").value
+  let f=document.getElementById("validationout3").value
+  let flag1,flag2
+  flag1=(
+      (a==null&&b!=null&&c!=null) ||
+      (a!=null&&b==null&&c!=null) ||
+      (a!=null&&b!=null&&c==null) 
+  )
+  flag2=(
+    (d==null&&e!=null&&f!=null) ||
+    (d!=null&&e==null&&f!=null) ||
+    (d!=null&&e!=null&&f==null) 
+)
+return (flag1&&flag2)
+}
+
 function validity(){
-  var num =document.getElementById("validationCustom06").value
-  return(6<num && num<9)
+  var num =parseInt( document.getElementById("validationCustom06").value);
+  var name= document.getElementById("validationCustom01").value.length;
+var captcha = parseInt(document.getElementById("validationout3").value);
+  alert(( 6<num && num<9 ) && ( 8<name && name<14 ) && ( captcha > 5 && captcha <10 ) && inputsVacios())
+  return( ( 6<num && num<9 ) && ( 8<name && name<14 ) && ( captcha > 5 && captcha <10 ) && inputsVacios() )
  
 }
 
@@ -23,9 +48,9 @@ function validity(){
   var form =  document.getElementById("mainform")
 
  
-    
+  
       form.addEventListener('submit', function (event) {
-        if (!form.checkValidity()||validity() ) {
+        if (!form.checkValidity() && !validity() ) {
           event.preventDefault()
           event.stopPropagation()
         }else{ event.preventDefault()
