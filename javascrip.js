@@ -11,3 +11,33 @@ if (toastTrigger) {
     toast.show()
   })
 }
+function validity(){
+  var num =document.getElementById("validationCustom06").value
+  return(6<num && num<9)
+ 
+}
+
+(function () {
+  'use strict'
+
+  var form =  document.getElementById("mainform")
+
+ 
+    
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()||validity() ) {
+          event.preventDefault()
+          event.stopPropagation()
+        }else{ event.preventDefault()
+        let content= `<div class="alert alert-success" role="alert">
+            A simple success alert—check it out!
+          </div>`
+          document.getElementById("result").innerHTML=content
+          
+
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    
+})()
