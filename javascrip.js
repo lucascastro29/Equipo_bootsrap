@@ -23,12 +23,14 @@ function inputsVacios(){
   flag1=(
       (a==null&&b!=null&&c!=null) ||
       (a!=null&&b==null&&c!=null) ||
-      (a!=null&&b!=null&&c==null) 
+      (a!=null&&b!=null&&c==null) ||
+      (a!=null&&b!=null&&c!==null)
   )
   flag2=(
     (d==null&&e!=null&&f!=null) ||
     (d!=null&&e==null&&f!=null) ||
-    (d!=null&&e!=null&&f==null) 
+    (d!=null&&e!=null&&f==null) ||
+    (d!=null&&e!=null&&f==null)
 )
 return (flag1&&flag2)
 }
@@ -38,32 +40,54 @@ function validity(){
   var num =parseInt( document.getElementById("validationCustom06").value);
   var name= document.getElementById("validationCustom01").value.length;
 var captcha = parseInt(document.getElementById("validationout3").value);
-  alert(( 6<num && num<9 ) && ( 8<name && name<14 ) && ( captcha > 5 && captcha <10 ) && inputsVacios())
-  return( ( 6<num && num<9 ) && ( 8<name && name<14 ) && ( captcha > 5 && captcha <10 ) && inputsVacios() )
+  alert(( 6<num && num<9 ) && ( 8<name && name<14 ) && ( captcha > 5 && captcha <10 ))
+  return( ( 6<num && num<9 ) && ( 8<name && name<14 ) && ( captcha > 5 && captcha <10 ) )
  
 }
+document.addEventListener('DOMContentLoaded',function(){
+  //'use strict'
 
-(function () {
-  'use strict'
-
-  var form =  document.getElementById("mainform")
-
- 
+  var form =  document.getElementById("mainform");
   
       form.addEventListener('submit', function (event) {
-        if (!form.checkValidity() && !validity() ) {
+        if (!form.checkValidity() || !validity() ) {
           event.preventDefault()
           event.stopPropagation()
-        }else{ event.preventDefault()
+        }else{
         let content= `<div class="alert alert-success" role="alert">
             A simple success alert—check it out!
           </div>`
           document.getElementById("result").innerHTML=content
-          
-
         }
 
         form.classList.add('was-validated')
       }, false)
     
-})()
+})
+
+document.addEventListener("DOMContentLoaded",
+    
+function recuperarDatos() {
+
+  let mis_datos_json = localStorage.getItem("mis_datos");
+
+  let mis_datos = JSON.parse(mis_datos_json);
+document.getElementById("usuario").innerHTML = 
+ mis_datos.usuario + "<br>";
+
+ 
+  
+
+});
+
+function guardarDatos() {
+
+  let mis_datos = {
+    usuario: document.getElementById("inputEmail").value
+  };
+
+
+let mis_datos_json = JSON.stringify(mis_datos);
+
+localStorage.setItem("mis_datos", mis_datos_json);
+ }

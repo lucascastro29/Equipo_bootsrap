@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Movies</title>
     <link href="bootstrap.min.css" rel="stylesheet">
 
 </head>
@@ -20,15 +20,44 @@
     </div>
   </div>
     <div class="row">
+<div class="row">
+  <div class="col-10">
+  <h1 style="color: white;margin: 30px;">Cinema</h1></div>
+  <div class="col-2" ><div class="d-flex" style="align-items: center; margin: 30px;"><a class="nav-link active border rounded" style="text-align: right; margin-right: 5px;" aria-current="page" href="form.html"><div style="color: white; text-decoration: none;" id="usuario" > Usuario</div></a>
+  <button type="button" class="btn border rounded col-6" data-bs-toggle="modal" data-bs-target="#exampleModalLabel1" style="color: white; text-decoration: none;">Activar cuenta</button>
+  </div></div>
 
-        <div class="col"><h1 style="color: white;">Cinema</h1></div>
+</div>
+<div class="modal fade" id="exampleModalLabel1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel1">Activar cuenta</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h2 style="color: black;">Activar cuenta</h2>
+        <p>  <input class="form-control" type="email" id="inputEmail" placeholder="Usuario"   > 
+          <input class="form-control"  type="password" id="inputPassword"placeholder="Contraseña"  >
+          <button class="btn btn-secondary" type="button" id="submitBtn" onclick="guardarDatos()">Ingresar</button>
+          </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Guardar Cambios</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
 
         <div class="row">
 
 <div class="row" > 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light" >
+        <div class="container-fluid" >
           <a class="navbar-brand" href="#"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -36,27 +65,26 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                <a class="nav-link active" aria-current="page" href="#" style="color: white;">Cartelera</a>
               </li>
    
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white;">
+                  Opciones
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">incio</a></li>
-                  <li><a class="dropdown-item" href="#">info</a></li>
+                  <li><a class="dropdown-item" href="#" >Teatro</a></li>
+                  <li><a class="dropdown-item" href="#">Funciones especiales</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  
                 </ul>
               </li>
               <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
+                <input class="form-control me-2" type="search" placeholder="¿Qué vas a ver?" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Buscar</button>
               </form>
-              <li class="nav-item " >
-                <a class="nav-link active " style="text-align: right;" aria-current="page" href="form.html">Usuario</a>
-e              </li>
+              <li class="nav-item ">
+              </li>
             </ul>
            
           </div>
@@ -130,19 +158,23 @@ e              </li>
     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
       <div class="accordion-body"   style="background-color:rgb(30, 29, 31) ;">
         <div class="row">
-          <div class="col-3 border rounded" style="height: 150px; margin: 15px;"></div>
-          <div class="col-3 border rounded" style="height: 150px; margin: 15px;"></div>
-          <div class="col-3 border rounded" style="height: 150px; margin: 15px;"></div>
+          <div class="col-3 border rounded" style="height: 150px; margin: 15px;"> <h3>20:00 hs</h3></div>
+          <div class="col-3 border rounded" style="height: 150px; margin: 15px;"> <h3>22:00 hs</h3></div>
+          <div class="col-3 border rounded" style="height: 150px; margin: 15px;"> <h3>19:00 hs</h3></div>
                 </div></div>
     </div>
   </div>
 </div>
 
 <div class="row"> 
-  <div class="d-flex justify-content-center"><button type="button" class="btn btn-primary" style="height: 100px;width: 150px;" data-bs-toggle="modal" data-bs-target="#Modal">
+  <div class="d-flex justify-content-center" style="margin: 15px;"><button type="button" class="btn btn-primary" style="height: 100px;width: 150px;" data-bs-toggle="modal" data-bs-target="#Modal">
+    
    <h2>Reservar</h2> 
+   
   </button></div>
   
+  <div class="d-flex justify-content-center"><button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLeft" aria-controls="offcanvasLeft">Snacks</button>
+  </div>
 
 </div>
 
@@ -152,6 +184,23 @@ e              </li>
     </div>
 
    
+    <div class="offcanvas offcanvas-start offcanvas-left " tabindex="-1" id="offcanvasLeft" aria-labelledby="offcanvasLeftLabel">
+      <div class="offcanvas-header" style="background: rgb(25, 24, 26);">
+        <h5 id="offcanvasLeftLabel"  ></h5>
+        
+        <button type="button"  class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body" style="background: rgb(25, 24, 26);">
+        <div class="row">
+          <div class="row"> <h2>Snacks</h2></div>
+          <div class="row">
+              <input class="col-5" type="number" class="form-control" > Movie Regular <small> <strong>$235</strong> </small> <br>
+              <input class="col-5" type="number" class="form-control" > Movie Grande <small> <strong>$275</strong> </small> <br>
+              <input class="col-5" type="number"  class="form-control" > Movie Love <small> <strong>$365</strong> </small> <br>
+              <input class="col-5" type="number" class="form-control" > Super Movie Love  <small> <strong>$410</strong> </small> </div></div>
+      </div>
+    </div>
+
 
     <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
@@ -161,20 +210,23 @@ e              </li>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <div class="row border rounded" style="height: 150px; margin: 15px;"><div><strong> Pelicula:</strong></div><div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown button
-              </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Cruella</a>
-                <a class="dropdown-item" href="#">Venom</a>
-                <a class="dropdown-item" href="#">The Guilty</a>
-              </div>
-            </div></div>
+            
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                 Peliculas
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li><a class="dropdown-item" href="#">Cruella</a></li>
+                  <li><a class="dropdown-item" href="#">Venom</a></li>
+                  <li><a class="dropdown-item" href="#">The Guilty</a></li>
+                </ul>
+              
            <img src="https://www.elconspirador.com.mx/wp-content/uploads/2020/06/386090F2-4571-45D4-85C4-62A46C979A65.png" alt="" style="height: 300px; width: 400px;">
+           
           </div>
+          
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
             <button type="button" class="btn btn-primary"  id="liveToastBtn">Continuar</button>
           </div>
         </div>
@@ -190,8 +242,9 @@ e              </li>
         </div>
       </div>
     </div>
+    
 
-
+    
     
 
 <script  src="bootstrap.bundle.js"></script>
